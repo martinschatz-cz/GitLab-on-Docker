@@ -16,5 +16,10 @@ services:
 
 volumes:
   gitlab_config: {}
-  gitlab_logs: {}
+  gitlab_logs:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./logs
   gitlab_data: {}
