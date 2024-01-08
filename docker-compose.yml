@@ -1,3 +1,5 @@
+# sudo docker exec -it grep ‘Password:’ /etc/gitlab/initial_root_password
+
 version: '3.6'
 services:
   web:
@@ -5,7 +7,7 @@ services:
     container_name: gitlab
     restart: always
     ports:
-      - '80:80'
+      - '8080:80'
       - '443:443'
       - '22:22'
     volumes:
